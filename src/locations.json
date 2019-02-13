@@ -1,0 +1,67 @@
+[
+    {
+        "code": "LPV",
+        "name": "Leppävaara",
+        "position": {
+            "lat": 60.219433,
+            "lng": 24.813614
+        }
+    },
+    {
+        "code": "MÄK",
+        "name": "Mäkkylä",
+        "position": {
+            "lat": 60.220683,
+            "lng": 24.841669
+        }
+    },
+    {
+        "code": "PJM",
+        "name": "Pitäjänmäki",
+        "position": {
+            "lat": 60.223635,
+            "lng":24.860135
+        }
+    },
+
+    {
+        "code": "VMO",
+        "name": "Valimo",
+        "position": {
+            "lat": 60.222056,
+            "lng": 24.876203
+        }
+    },
+    {
+        "code": "HPL",
+        "name": "Huopalahti",
+        "position": {
+            "lat": 60.218231,
+            "lng": 24.892960
+        }
+    },
+    {
+        "code": "ILA",
+        "name": "Ilmala",
+        "position": {
+            "lat": 60.207310,
+            "lng": 24.921938
+        }
+    },
+    {
+        "code": "PSL",
+        "name": "Pasila",
+        "position": {
+            "lat": 60.198927,
+            "lng": 24.933321
+        }
+    },
+    {
+        "code": "HKI",
+        "name": "Helsinki",
+        "position": {
+            "lat": 60.172087,
+            "lng": 24.941373
+        }
+    }
+]
