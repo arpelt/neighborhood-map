@@ -17,6 +17,9 @@ Or press the "Clone or download" button and select "Download ZIP".
 * Install all project dependencies with `npm install`
 * Start the development server with `npm start`
 
+***Note: The Service Worker works only in the production build.***  
+* To create a production build, use `npm run build`
+
 <a name="depend"></a>
 ## Dependencies
 * [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial)
