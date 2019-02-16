@@ -30,14 +30,14 @@
 
     function gm_authFailure() {
       let error = document.getElementsByClassName('gm-err-message')[0]
-      error.textContent = 'Failed to load Google MAP API'
+      error.textContent = 'Failed to load Google MAP API (authentication failure)'
     }
 
     function error() {
       try {
         let loading = document.getElementsByClassName('map-container')
         if (loading.length == 0) {
-          throw 'Failed to load Google MAP API (authentication failure)';
+          throw 'Failed to load Google MAP API';
         }
       }
       catch (e) {
