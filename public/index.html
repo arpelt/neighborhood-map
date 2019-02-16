@@ -27,11 +27,17 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <script>
+
+    function gm_authFailure() {
+      let error = document.getElementsByClassName('gm-err-message')[0]
+      error.textContent = 'Failed to load Google MAP API'
+    }
+
     function error() {
       try {
         let loading = document.getElementsByClassName('map-container')
         if (loading.length == 0) {
-          throw 'Failed to load Google MAP API';
+          throw 'Failed to load Google MAP API (authentication failure)';
         }
       }
       catch (e) {
@@ -43,7 +49,7 @@
 
     setTimeout(function () {
       error();
-    }, 1500);
+    }, 5000);
 
   </script>
   <!--
