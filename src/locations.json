@@ -2,6 +2,7 @@
     {
         "code": "LPV",
         "name": "Leppävaara",
+        "animation": null,
         "position": {
             "lat": 60.219433,
             "lng": 24.813614
@@ -10,6 +11,7 @@
     {
         "code": "MÄK",
         "name": "Mäkkylä",
+        "animation": null,
         "position": {
             "lat": 60.220683,
             "lng": 24.841669
@@ -18,15 +20,16 @@
     {
         "code": "PJM",
         "name": "Pitäjänmäki",
+        "animation": null,
         "position": {
             "lat": 60.223635,
-            "lng":24.860135
+            "lng": 24.860135
         }
     },
-
     {
         "code": "VMO",
         "name": "Valimo",
+        "animation": null,
         "position": {
             "lat": 60.222056,
             "lng": 24.876203
@@ -35,6 +38,7 @@
     {
         "code": "HPL",
         "name": "Huopalahti",
+        "animation": null,
         "position": {
             "lat": 60.218231,
             "lng": 24.892960
@@ -43,6 +47,7 @@
     {
         "code": "ILA",
         "name": "Ilmala",
+        "animation": null,
         "position": {
             "lat": 60.207310,
             "lng": 24.921938
@@ -51,6 +56,7 @@
     {
         "code": "PSL",
         "name": "Pasila",
+        "animation": null,
         "position": {
             "lat": 60.198927,
             "lng": 24.933321
@@ -59,6 +65,7 @@
     {
         "code": "HKI",
         "name": "Helsinki",
+        "animation": null,
         "position": {
             "lat": 60.172087,
             "lng": 24.941373

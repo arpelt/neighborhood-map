@@ -7,11 +7,13 @@ class Sidebar extends Component {
 
   onStatioKeyPress = (event, stationData) => {
     if (event.key === 'Enter') {
+      this.props.markerAnimation(stationData)
       this.props.onStationClick(stationData)
     }
   }
 
   onSideBarClick(e, stationData) {
+    this.props.markerAnimation(stationData)
     this.props.onStationClick(stationData)
   }
 

@@ -8,14 +8,19 @@ import './App.css'
 const stations = require('./locations.json')
 
 export class MapContainer extends Component {
-    state = {
-        showingInfoWindow: false,
-        stations: [],
-        query: [],
-        position: { lat: 60.1953, lng: 24.8603191 },
-        name: '',
-        stationTrains: [],
-        initialStations: []
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            showingInfoWindow: false,
+            stations: [],
+            query: [],
+            position: { lat: 60.203596, lng: 24.907694 },
+            name: '',
+            stationTrains: [],
+            initialStations: [],
+        }
     }
 
     componentDidMount() {
@@ -27,10 +32,21 @@ export class MapContainer extends Component {
         if (query) {
             this.setState({ stations: query })
             this.setState({ showingInfoWindow: false })
+            for (let i = 0; i < stations.length; i++) {
+                delete stations[i].animation;
+            }
         }
     }
 
+//TODO: Refactor
     onStationClick = (props) => {
+        if (!props.animation) {
+            for (let i = 0; i < stations.length; i++) {
+                delete stations[i].animation;
+            }
+            this.setState({ stations: stations })
+        }
+        
         this.setState({ stationTrains: ["Loading..."] })
         departureTrains(props).then((trains) => {
             if (trains) {
@@ -48,7 +64,24 @@ export class MapContainer extends Component {
         })
     }
 
+//TODO: Refactor
+    markerAnimation = (station) => {
+        for (let i = 0; i < stations.length; i++) {
+            delete stations[i].animation;
+        }
+        for (let i = 0; i < stations.length; i++) {
+            if (station.name === stations[i].name) {
+                stations[i].animation = 1
+            }
+        }
+        this.setState({ stations: stations })
+    }
+
+//TODO: Refactor
     onMapClicked = () => {
+        for (let i = 0; i < stations.length; i++) {
+            delete stations[i].animation;
+        }
         if (this.state.showingInfoWindow) {
             this.setState({
                 showingInfoWindow: false
@@ -68,6 +101,7 @@ export class MapContainer extends Component {
                         lng: 24.907694
                     }}
                 >
+
                     {this.state.stations.map((station) => (
                         <Marker
                             key={station.code}
@@ -75,6 +109,7 @@ export class MapContainer extends Component {
                             name={station.name}
                             code={station.code}
                             position={{ lat: station.position.lat, lng: station.position.lng }}
+                            animation={station.animation}
                         />
                     ))}
                     <InfoWindow
@@ -98,9 +133,11 @@ export class MapContainer extends Component {
                         initialStations={this.state.initialStations}
                     />
                     <Sidebar
+                        google={this.props.google}
                         stations={this.state.stations}
                         onStationClick={this.onStationClick}
                         position={this.props.position}
+                        markerAnimation={this.markerAnimation}
                     />
                 </Map>
             </div>

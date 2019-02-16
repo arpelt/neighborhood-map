@@ -87,7 +87,6 @@ input[type=text] {
     overflow: auto;
     height: 230px;
     padding: 10px;
-    /*  height: auto;*/
   }
   .search-container {
     width: 100%;
