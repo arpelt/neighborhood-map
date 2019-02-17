@@ -77,15 +77,15 @@ input[type=text] {
 /* Tablet & Mobile */
 @media screen and (max-width: 750px) {
   .map-container {
-    height: 350px;
+    height: 250px;
     width: 100%;
   }
   ol.sidebar {
-    top: 403px;
+    top: 303px;
     width: 100%;
     text-align: center;
     overflow: auto;
-    height: 230px;
+    height: 180px;
     padding: 10px;
   }
   .search-container {
