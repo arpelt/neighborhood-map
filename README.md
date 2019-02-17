@@ -5,6 +5,7 @@ With this application you can see real-time information on departing trains a sp
 ## Table of Contents
 
 * [Installation](#install)
+* [Live Version](#live)
 * [Dependencies](#depend)
 
 <a name="install"></a>
@@ -19,6 +20,10 @@ Or press the "Clone or download" button and select "Download ZIP".
 
 ***Note: The Service Worker works only in the production build.***  
 * To create a production build, use `npm run build`
+
+<a name="live"></a>
+## Live Version
+* [Neighborhood Map live version](https://arpelt.azurewebsites.net/neighborhood-map/)
 
 <a name="depend"></a>
 ## Dependencies
